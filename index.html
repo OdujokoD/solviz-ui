@@ -4,9 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Solviz</title>
 </head>
 <body>
-  
+  <div class="columns is-mobile">
+    <div class="column is-one-fifth">
+      <aside class="menu">
+        <p class="menu-label">General</p>
+        <div class="section-header">
+          <i class="fa fa-cubes" aria-hidden="true"></i>
+          <h3>Solar</h3>
+        </div>
+        <form class="searh-box">
+          <div class="input-group">
+            <input
+              id="search-entry"
+              type="search"
+              placeholder="Find a topic or word"
+              class="form-control"
+            />
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+          <!-- <p class="search-hint">Find topic, word ...</p> -->
+        </form>
+        <div class="section-content">
+          <div class="nav-container">
+            <span id="topics" class="nav-link active">Topics</span>
+            <span id="history" class="nav-link">History</span>
+          </div>
+          <div class="content">
+            <div class="inner-content"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="column main">
+      <form v-on:submit.prevent="uploadFile" accept-charset="UTF-8" enctype="multipart/form-data" >
+        <input type="file" multiple ref="file" v-on:change="handleFileUpload" />
+        <p>{{ message }}</p>
+        <button class="button is-primary" v-bind:disabled="isDisabled">
+          Upload
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
 </body>
 </html>

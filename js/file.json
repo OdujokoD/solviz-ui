@@ -1,0 +1,57 @@
+[
+    {
+        "docID": 1,
+        "topic": "document 0",
+        "words": ["example", "approaches", "patients", "universities", "negative", "depicted", "impacts",
+             "ensure", "including", "university"]
+    },
+    {
+        "docID": 2,
+        "topic": "Educational stages",
+        "words": ["example", "approaches", "patients", "universities", "negative", "depicted", "impacts",
+            "ensure", "including", "university"]
+    },
+    {
+        "docID": 3,
+        "topic": "Analysis",
+        "words": ["donnison", "occupation", "century", "ensured", "midwives", "increasing", 
+        "control", "probabilistic", "analysis", "qualify"]
+    },
+    {
+        "docID": 4,
+        "topic": "Logical consequence",
+        "words": ["viewed", "mining", "based", "science", "form", "latent", "plsa", "result", "focus","semantic"]
+    },
+    {
+        "docID": 5,
+        "topic": "Medicine",
+        "words": ["women", "medicine", "profession", "male", "classes", "medical", "female", "upper", "implications", "seen"]
+    },
+    {
+        "docID": 6,
+        "topic": "Data",
+        "words": ["class", "practice", "text", "especially", "topic", "data", "gender", "documents", "able", "inferior"]
+    },
+    {
+        "docID": 7,
+        "topic": "Relation",
+        "words": ["ensuring", "modelling", "births", "study", "relation", "entry", "method", "keen", "only", "volume"]
+    },
+    {
+        "docID": 8,
+        "topic": "Significant",
+        "words": ["afford", "affect", "surgeons", "status", "significant", "proposed", "increased", "associated"]
+    },
+    {
+        "docID": 9,
+        "topic": "Rise",
+        "words": ["rise", "previously", "world", "terms", "gain", "regarded", "smart", "resulted", "lsi", "care"]
+    },
+    {
+        "docID": 8,
+        "topic": "Virtue",
+        "words": ["exclusion", "dominated", "excluded", "witz", "lay", "qualities", "changed", "experience", "treatments", 
+            "responsibility"]
+    }
+
+]
