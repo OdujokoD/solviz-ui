@@ -4,7 +4,7 @@ form {
   border: 4px dashed #314b5f;
   margin: 50px auto;
 }
-form p {
+form .block {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -33,4 +33,14 @@ form button:hover {
 }
 form button:active {
   border: 0;
+}
+
+form .status .progress {
+  margin-bottom: 0 !important;
+  margin-top: 20px;
+}
+
+form .status p {
+  text-align: center;
+  margin-top: 10px;
 }

@@ -29,6 +29,8 @@ var app = new Vue({
     // Fired when the server sends something on the "messageChannel" channel.
     json(data) {
       console.log(data);
+      window.localStorage.setItem('lda', JSON.stringify(data));
+      window.location.href = '/visualize.html';//'http://localhost:8000/visualize.html';
       this.socketMessage = data
     }
   },

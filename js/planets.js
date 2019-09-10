@@ -13,7 +13,7 @@ function initSolarBody(data) {
         switch (i) {
             case 0:
                 var sun = createSun(80, 30, 30)
-                sun.userData["docId"] = data[i]["docID"]
+                sun.userData["id"] = data[i]["id"]
                 sun.name = data[i]["topic"]
                 sun.userData["words"] = data[i]["words"]
                 createText(sun, 80, sun.name)
@@ -21,7 +21,7 @@ function initSolarBody(data) {
                 break;
             case 1:
                 var mercury = createMercury(23, 35, 35)
-                mercury.userData["docId"] = data[i]["docID"]
+                mercury.userData["id"] = data[i]["id"]
                 mercury.name = data[i]["topic"]
                 mercury.userData["words"] = data[i]["words"]
                 createText(mercury, 23, mercury.name)
@@ -30,7 +30,7 @@ function initSolarBody(data) {
                 break;
             case 2:
                 var venus = createVenus(24, 40, 40)
-                venus.userData["docId"] = data[i]["docID"]
+                venus.userData["id"] = data[i]["id"]
                 venus.name = data[i]["topic"]
                 venus.userData["words"] = data[i]["words"]
                 createText(venus, 24, venus.name)
@@ -39,7 +39,7 @@ function initSolarBody(data) {
                 break;
             case 3:
                 var earth = createEarth(25, 45, 45)
-                earth.userData["docId"] = data[i]["docID"]
+                earth.userData["id"] = data[i]["id"]
                 earth.name = data[i]["topic"]
                 earth.userData["words"] = data[i]["words"]
                 createText(earth, 25, earth.name)
@@ -48,7 +48,7 @@ function initSolarBody(data) {
                 break;
             case 4:
                 var mars = createMars(20, 30, 30)
-                mars.userData["docId"] = data[i]["docID"]
+                mars.userData["id"] = data[i]["id"]
                 mars.name = data[i]["topic"]
                 mars.userData["words"] = data[i]["words"]
                 createText(mars, 20, mars.name)
@@ -57,7 +57,7 @@ function initSolarBody(data) {
                 break;
             case 5:
                 var jupiter = createJupiter(45, 55, 55)
-                jupiter.userData["docId"] = data[i]["docID"]
+                jupiter.userData["id"] = data[i]["id"]
                 jupiter.name = data[i]["topic"]
                 jupiter.userData["words"] = data[i]["words"]
                 createText(jupiter, 45, jupiter.name)
@@ -66,7 +66,7 @@ function initSolarBody(data) {
                 break;
             case 6:
                 var saturn = createSaturn(35, 45, 45)
-                saturn.userData["docId"] = data[i]["docID"]
+                saturn.userData["id"] = data[i]["id"]
                 saturn.name = data[i]["topic"]
                 saturn.userData["words"] = data[i]["words"]
                 createText(saturn, 35, saturn.name)
@@ -75,7 +75,7 @@ function initSolarBody(data) {
                 break;
             case 7:
                 var uranus = createUranus(25, 40, 40)
-                uranus.userData["docId"] = data[i]["docID"]
+                uranus.userData["id"] = data[i]["id"]
                 uranus.name = data[i]["topic"]
                 uranus.userData["words"] = data[i]["words"]
                 createText(uranus, 25, uranus.name)
@@ -84,7 +84,7 @@ function initSolarBody(data) {
                 break;
             case 8:
                 var neptune = createNeptune(24, 40, 40)
-                neptune.userData["docId"] = data[i]["docID"]
+                neptune.userData["id"] = data[i]["id"]
                 neptune.name = data[i]["topic"]
                 neptune.userData["words"] = data[i]["words"]
                 createText(neptune, 24, neptune.name)
@@ -93,7 +93,7 @@ function initSolarBody(data) {
                 break;
             case 9:
                 var pluto = createPluto(15, 30, 30)
-                pluto.userData["docId"] = data[i]["docID"]
+                pluto.userData["id"] = data[i]["id"]
                 pluto.name = data[i]["topic"]
                 pluto.userData["words"] = data[i]["words"]
                 createText(pluto, 15, pluto.name)

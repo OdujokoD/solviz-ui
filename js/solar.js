@@ -21,15 +21,21 @@
 
     hideActiveTopic()
 
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            documents = JSON.parse(xmlhttp.responseText);
-            setupScene();
-        }
-    }
+    // xmlhttp.onreadystatechange = function () {
+    //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //         documents = JSON.parse(xmlhttp.responseText);
+    //         setupScene();
+    //     }
+    // }
 
-    xmlhttp.open("GET", json_url, true);
-    xmlhttp.send();
+    // xmlhttp.open("GET", json_url, true);
+    // xmlhttp.send();
+
+    const item = window.localStorage.getItem('lda');
+    documents = JSON.parse(item)
+
+    setupScene();
+
 
     function setupScene() {
         scene = new THREE.Scene();
@@ -54,11 +60,11 @@
         addStars();
 
         // add planets
-        planetObject = initSolarBody(documents)
+        planetObject = initSolarBody(documents.data.topics)
         scene.add(planetObject)
 
         // load sidebar topics
-        showTopics(documents)
+        showTopics(documents.data.topics)
 
         // constellation = init()
         // scene.add(constellation)
