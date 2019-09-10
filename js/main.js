@@ -11,6 +11,7 @@ var app = new Vue({
     file: "",
     isDisabled: true,
     isConnected: false,
+    showStatus: false,
     socketMessage: '',
     message: "Drag your files here or click in this area."
   },
@@ -39,10 +40,12 @@ var app = new Vue({
     },
     uploadFile() {
       let formData = new FormData();
-      const axios = require('axios');
+      // const axios = require('axios');
       formData.append('file', this.file);
 
-      // this.$socket.emit('upload', formData)
+      this.resetForm();
+      this.showStatus = true;
+      console.log("Form data: ", formData)
 
       axios.post('http://localhost:5000/upload',formData)
       .then(response => {
@@ -54,6 +57,11 @@ var app = new Vue({
 
       // event.target.reset();
       // this.isDisabled = true
+    },
+    resetForm() {
+      this.file = "";
+      this.message = "Drag your files here or click in this area.";
+      this.isDisabled = true;
     }
   }
 })

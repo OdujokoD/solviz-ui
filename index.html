@@ -13,15 +13,20 @@
     <div class="column main">
       <form v-on:submit.prevent="uploadFile" accept-charset="UTF-8" enctype="multipart/form-data" >
         <input type="file" multiple ref="file" v-on:change="handleFileUpload" />
-        <p>{{ message }}</p>
+        <p class="block">{{ message }}</p>
         <button class="button is-primary" v-bind:disabled="isDisabled">
           Upload
         </button>
+        <div class="status" v-if="showStatus">
+          <progress class="progress is-small is-primary" max="100"></progress>
+          <p>Processing file...</p>
+        </div>
       </form>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-socket.io@3.0.7/dist/vue-socketio.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
