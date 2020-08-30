@@ -1,4 +1,6 @@
 const url = 'https://solviz-2020.ey.r.appspot.com';
+// const url = 'http://localhost:5000';
+const FILE_NAME = 'solviz_file_name'
 
 Vue.use(
   new VueSocketIO({
@@ -46,6 +48,7 @@ var app = new Vue({
       let formData = new FormData();
       // const axios = require('axios');
       formData.append('file', this.file);
+      window.localStorage.setItem(FILE_NAME, this.file.name)
 
       this.resetForm();
       this.showStatus = true;
@@ -58,7 +61,7 @@ var app = new Vue({
       })
       .then(response => {
         console.log(response)
-        this.$socket.emit('process file')
+        this.$socket.emit('process file', window.localStorage.getItem(FILE_NAME))
       }).catch(error => {
         console.log('In error: ', error)
       });
