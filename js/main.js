@@ -42,6 +42,7 @@ var app = new Vue({
     },
     uploadFile() {
       let formData = new FormData();
+      let url = 'https://solviz-2020.ey.r.appspot.com';
       // const axios = require('axios');
       formData.append('file', this.file);
 
@@ -49,7 +50,7 @@ var app = new Vue({
       this.showStatus = true;
       console.log("Form data: ", formData)
 
-      axios.post('http://localhost:5000/upload',formData)
+      axios.post(`${url}/upload`,formData)
       .then(response => {
         console.log(response)
         this.$socket.emit('process file')
