@@ -51,7 +51,11 @@ var app = new Vue({
       this.showStatus = true;
       console.log("Form data: ", formData)
 
-      axios.post(`${url}/upload`,formData)
+      axios.post(`${url}/upload`,formData, {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      })
       .then(response => {
         console.log(response)
         this.$socket.emit('process file')
