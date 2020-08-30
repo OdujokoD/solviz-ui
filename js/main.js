@@ -1,7 +1,9 @@
+const url = 'https://solviz-2020.ey.r.appspot.com';
+
 Vue.use(
   new VueSocketIO({
     debug: true,
-    connection: "http://127.0.0.1:5000/"
+    connection: url
   })
 );
 
@@ -42,7 +44,6 @@ var app = new Vue({
     },
     uploadFile() {
       let formData = new FormData();
-      let url = 'https://solviz-2020.ey.r.appspot.com';
       // const axios = require('axios');
       formData.append('file', this.file);
 
