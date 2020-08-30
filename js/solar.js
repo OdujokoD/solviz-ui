@@ -201,9 +201,20 @@
             var intersect = intersects[0];
             var objectType = intersect.object.type
 
-            alert(intersect.object.name)
+            let query = intersect.object.name;
+            search(query)
 
         }
+    }
+
+    function search(query) {
+        $.get( "http://localhost:5000/search?query=" + query )
+            .done(function( data ) {
+                console.log( "Data returned: " + data.data );
+            })
+            .fail(function(error) {
+                console.log("Error here: ", error);
+            });
     }
 
     function updateCamera(planet) {
