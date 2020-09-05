@@ -1,4 +1,4 @@
-const url = 'https://solviz-2020.ey.r.appspot.com';
+const url = 'https://lda-irs.ew.r.appspot.com';
 // const url = 'http://localhost:5000';
 const FILE_NAME = 'solviz_file_name'
 
